@@ -2,7 +2,17 @@
 
 Public plugin marketplace for CU Wire Data.
 
-## Codex
+## Customer Flow
+
+Customers should not need this Git marketplace directly. The intended customer
+experience is: open the Claude or Codex connector/plugin library, search for
+`CU Wire Data`, click **Connect**, sign in to CU Wire Data, approve read-only
+access, and return to the assistant.
+
+This Git marketplace is the tester/developer install path until CU Wire Data is
+accepted into the built-in public catalog.
+
+## Codex Tester Install
 
 ```bash
 codex plugin marketplace add CUWireDatav2/cu-wire-data-plugins
@@ -18,7 +28,7 @@ If the CU Wire Data skill appears but the `cuwiredata_*` tools do not, re-run
 task or restart the desktop app. Do not use `CUWIREDATA_API_KEY` for the public
 plugin path.
 
-## Claude Code
+## Claude Code Tester Install
 
 ```bash
 claude plugin marketplace add CUWireDatav2/cu-wire-data-plugins

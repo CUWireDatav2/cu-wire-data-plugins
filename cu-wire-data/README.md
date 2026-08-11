@@ -4,7 +4,17 @@ Read-only Codex plugin for licensed CU Wire Data access.
 
 Installing this plugin does not grant CU Wire Data access. Users need a licensed CU Wire Data account.
 
-## Setup
+## Customer Flow
+
+Customers should not need terminal commands. The intended customer experience is:
+open the Claude or Codex connector/plugin library, search for `CU Wire Data`,
+click **Connect**, sign in to CU Wire Data, approve read-only access, and return
+to the assistant.
+
+This Git marketplace package is the tester/developer install path until CU Wire
+Data is accepted into the built-in public catalog.
+
+## Tester/Developer Setup
 
 Install from the CU Wire Data marketplace:
 
