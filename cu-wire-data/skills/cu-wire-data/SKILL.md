@@ -13,11 +13,15 @@ The plugin uses browser-based OAuth account connect through CU Wire Data. Codex 
 
 Never print or paste API keys, OAuth codes, connector tokens, or bearer tokens into chat, files, PRs, command output, screenshots, or docs. If the OAuth flow fails, treat that as setup failure and ask the user to reconnect the plugin through Codex's MCP login/connect flow.
 
+Do not tell plugin users to set `CUWIREDATA_API_KEY` for normal Codex or Claude Code usage. That is a legacy/manual MCP setup path, not the public plugin path. For the public plugin, the correct fix is OAuth reconnect plus a fresh task/session.
+
 ## Failure Handling
 
 If a CU Wire Data tool call fails because the connector is unauthenticated, unlicensed, expired, missing a bearer token, missing an API key, or otherwise unable to return licensed CU Wire Data, stop and report the connection problem. Do not answer the CU Wire Data request from public NCUA data, web search, cached data, model memory, prior runs, screenshots, PDFs, or any other fallback source.
 
 Do not write a "using public NCUA fallback instead" response. That is a product failure because it disguises a licensed-connector setup problem as a data answer.
+
+If the CU Wire Data skill is available but the `cuwiredata_*` tools are not exposed in the active task, report this as a plugin tool-discovery/session-refresh problem. Tell the user to run or re-run `codex mcp login cu-wire-data`, approve the browser connection, and start a new Codex task or restart the desktop app. Do not claim the product requires a local API key in that case.
 
 ## Tools
 

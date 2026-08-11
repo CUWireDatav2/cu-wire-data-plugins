@@ -23,6 +23,10 @@ After approval, start a new Codex task before testing. Already-open tasks can
 keep a stale MCP tool list and may not expose `cuwiredata_get_industry_summary`
 until the task/session refreshes.
 
+If the skill is visible but the `cuwiredata_*` tools are missing, do not set
+`CUWIREDATA_API_KEY`. Re-run `codex mcp login cu-wire-data`, approve the browser
+connection, then start a new task or restart the desktop app.
+
 The plugin connects to:
 
 ```text

@@ -13,6 +13,11 @@ codex mcp login cu-wire-data
 After approving the browser connection, start a new Codex task before testing.
 Already-open tasks can keep a stale MCP tool list.
 
+If the CU Wire Data skill appears but the `cuwiredata_*` tools do not, re-run
+`codex mcp login cu-wire-data`, approve the browser connection, then start a new
+task or restart the desktop app. Do not use `CUWIREDATA_API_KEY` for the public
+plugin path.
+
 ## Claude Code
 
 ```bash

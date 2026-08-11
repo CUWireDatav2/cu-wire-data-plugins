@@ -1,6 +1,6 @@
 {
   "name": "cu-wire-data",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Read-only, licensed CU Wire Data access for U.S. credit union industry data in Claude Code.",
   "author": {
     "name": "CU Wire Data",
