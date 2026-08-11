@@ -1,0 +1,22 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "cu-wire-data",
+  "description": "CU Wire Data plugins for read-only, licensed U.S. credit union industry data access.",
+  "owner": {
+    "name": "CU Wire Data",
+    "email": "data@cuwiredata.com"
+  },
+  "plugins": [
+    {
+      "name": "cu-wire-data",
+      "description": "Read-only, licensed CU Wire Data access for U.S. credit union industry data in Claude Code and Codex.",
+      "author": {
+        "name": "CU Wire Data",
+        "url": "https://cuwiredata.com"
+      },
+      "category": "data",
+      "source": "./cu-wire-data",
+      "homepage": "https://cu-wire-mcp.vercel.app/connector-docs.html"
+    }
+  ]
+}
