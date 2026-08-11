@@ -29,7 +29,7 @@
     ],
     "websiteURL": "https://cuwiredata.com",
     "privacyPolicyURL": "https://cu-wire-mcp.vercel.app/connector-privacy.html",
-    "termsOfServiceURL": "https://cuwiredata.com",
+    "termsOfServiceURL": "https://cuwiredata.com/terms",
     "defaultPrompt": [
       "Get the current credit union industry summary.",
       "Find the largest North Carolina credit unions.",
