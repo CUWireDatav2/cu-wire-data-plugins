@@ -1,8 +1,10 @@
-# CU Wire Data Codex Plugin
+# CU Wire Data Plugin
 
-Read-only Codex plugin for licensed CU Wire Data access.
+Read-only plugin for licensed CU Wire Data access in Claude Code, Codex, and
+other MCP clients.
 
-Installing this plugin does not grant CU Wire Data access. Users need a licensed CU Wire Data account.
+Installing this plugin does not grant CU Wire Data access. Users need a licensed
+CU Wire Data account.
 
 ## Customer Flow
 
@@ -16,26 +18,48 @@ Data is accepted into the built-in public catalog.
 
 ## Tester/Developer Setup
 
-Install from the CU Wire Data marketplace:
+### Claude Code
+
+```bash
+claude plugin marketplace add CUWireDatav2/cu-wire-data-plugins
+```
+
+```bash
+claude plugin install cu-wire-data@cu-wire-data
+```
+
+Then run `/mcp`, select `cu-wire-data`, and choose **Authenticate**. Sign in to
+CU Wire Data in the browser and approve read-only access.
+
+### Codex
 
 ```bash
 codex plugin marketplace add CUWireDatav2/cu-wire-data-plugins
+```
+
+```bash
 codex plugin add cu-wire-data@cu-wire-data
+```
+
+```bash
 codex mcp login cu-wire-data
 ```
 
-Connect the plugin through Codex's MCP OAuth flow. Codex opens a browser window
-to CU Wire Data, the user signs in, approves read-only connector access, and
-returns to Codex. No API key is pasted into Codex, chat, URLs, screenshots, or
-repository files.
-
 After approval, start a new Codex task before testing. Already-open tasks can
 keep a stale MCP tool list and may not expose `cuwiredata_get_industry_summary`
-until the task/session refreshes.
+until the task or session refreshes.
 
-If the skill is visible but the `cuwiredata_*` tools are missing, do not set
-`CUWIREDATA_API_KEY`. Re-run `codex mcp login cu-wire-data`, approve the browser
-connection, then start a new task or restart the desktop app.
+## Authentication
+
+Both paths use the same browser OAuth flow. The assistant opens a CU Wire Data
+sign-in and approval page, the user approves read-only access, and the client
+returns holding a scoped connector token. No API key is pasted into the
+assistant, chat, URLs, screenshots, or repository files.
+
+If the skill is visible but the `cuwiredata_*` tools are missing, reconnect
+through your assistant's MCP connect flow and start a new session or task. Do
+not set `CUWIREDATA_API_KEY`; that is a legacy manual path, not the public
+plugin path.
 
 The plugin connects to:
 
